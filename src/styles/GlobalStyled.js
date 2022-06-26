@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import 'react-toastify/dist/ReactToastify.css';
 
 const GlobalStyled = createGlobalStyle`
@@ -15,4 +15,34 @@ const GlobalStyled = createGlobalStyle`
     }
 `
 
-export { GlobalStyled }
+const Container = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+`
+const MainBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    background: #576574;
+`
+const List = styled.nav`
+    position: relative;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    overflow-y: auto;
+    ul{
+        width: 100%;
+    }
+`
+
+export { GlobalStyled, Container, MainBox, List }
