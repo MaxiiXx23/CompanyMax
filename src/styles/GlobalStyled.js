@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components'
+import {Link} from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.css';
 
 const GlobalStyled = createGlobalStyle`
@@ -21,6 +22,7 @@ const Container = styled.div`
     justify-content: center;
     width: 100%;
     height: 100%;
+    
 `
 const MainBox = styled.div`
     display: flex;
@@ -30,6 +32,8 @@ const MainBox = styled.div`
     width: 50%;
     height: 50%;
     background: #576574;
+    border: 1px solid #fff;
+    border-radius: 2px;
 `
 const List = styled.nav`
     position: relative;
@@ -44,5 +48,10 @@ const List = styled.nav`
         width: 100%;
     }
 `
+const LinkCustom = styled(Link)`
+    text-decoration: none;
+    color: #fff;
 
-export { GlobalStyled, Container, MainBox, List }
+`
+
+export { GlobalStyled, Container, MainBox, List, LinkCustom }

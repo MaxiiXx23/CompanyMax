@@ -1,7 +1,7 @@
 
 import { Search } from '../../components/search'
 import { InfoList } from '../../components/InfoList'
-import { Container, MainBox, List } from '../../styles/GlobalStyled'
+import { Container, MainBox, List, LinkCustom } from '../../styles/GlobalStyled'
 
 function Home() {
 
@@ -66,7 +66,11 @@ function Home() {
                 <Search />
                 <List>
                     {
-                        companies.map((company, index) => <InfoList key={index} info={company} />)
+                        companies.map((company, index) => (
+                            <LinkCustom to={`/company/${index}`}>
+                                <InfoList key={index} info={company} />
+                            </LinkCustom>
+                        ))
                     }
                 </List>
             </MainBox>
