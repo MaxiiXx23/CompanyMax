@@ -67,8 +67,8 @@ function Home() {
                 <List>
                     {
                         companies.map((company, index) => (
-                            <LinkCustom to={`/company/${index}`}>
-                                <InfoList key={index} info={company} />
+                            <LinkCustom key={index} to={`/company/${index}`}>
+                                <InfoList  info={company} />
                             </LinkCustom>
                         ))
                     }
