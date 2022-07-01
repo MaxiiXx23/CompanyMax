@@ -3,6 +3,7 @@ import { ToastContainer } from 'react-toastify'
 
 import { RoutesApp } from './routes'
 import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 import { GlobalStyled } from './styles/GlobalStyled';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           draggable
           pauseOnHover
         />
+        <Footer />
       </BrowserRouter>
     </>
   );
