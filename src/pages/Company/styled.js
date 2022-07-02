@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
-    display: flex;
+    display: block;
     flex: 1;
     flex-direction: column;
     align-items: center;
@@ -85,8 +85,8 @@ const Tabs = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px;
-    border-bottom: 1px solid #0abde3 ;
+    padding: 10px;
+    height: 80px;
     button{
         display: flex;
         align-items: center;

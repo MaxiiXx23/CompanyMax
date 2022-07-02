@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 const Container = styled.div`
-    width: 80%;
-    display: block;
+    flex: 1;
+    display: flex;
     margin: 2px 0 2px;
     align-items: center;
     justify-content: center;
@@ -33,7 +33,7 @@ const List = styled.nav`
     color: #fff;
     border: 1px solid #222f3e;
     border-radius: 2px;
-    width: 100%;
+    width: 80%;
     height: 350px;
     overflow-y: auto;
     animation: balance 1s normal;
