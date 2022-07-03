@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { device } from '../../Config/responsiveConfig'
+
 const Container = styled.div`
     display: block;
     flex: 1;
@@ -11,6 +13,16 @@ const Container = styled.div`
     img{
         height: 250px;
         width: 100%;
+    }
+    @media ${device.mobileM} and (max-width:425px){
+        img{
+            height: 220px;
+        }
+    }
+    @media ${device.mobileS} and (max-width:374px){
+        img{
+            height: 180px;
+        }
     }
 `
 
@@ -31,14 +43,37 @@ const Photo = styled.div`
         height: 180px;
         border-radius: 50%;
     }
+    @media ${device.mobileM} and (max-width:425px){
+        img{
+            height: 120px;
+            width: 120px;
+        }
+    }
+    @media ${device.mobileS} and (max-width:374px){
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    }
 `
 const Datas = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     span{
         margin: 4px 0 4px 0;
+    }
+    @media ${device.mobileM} and (max-width:425px){
+        span{
+            font-size: 14px;
+        }
+    }
+    @media ${device.mobileS} and (max-width:374px){
+        span{
+            font-size: 12px;
+        }
     }
 `
 const More = styled.div`
@@ -46,6 +81,7 @@ const More = styled.div`
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     button{
         display: flex;
         align-items: center;
@@ -79,6 +115,38 @@ const More = styled.div`
         text-decoration: none;
         cursor: pointer;
     }
+    @media ${device.mobileM} and (max-width:425px){
+        button{
+            padding: 4px;
+            font-size: 14px;
+        }
+        button:hover{
+            padding: 8px;
+            font-size: 14px;
+        }
+        span{
+            font-size: 8px;
+        }
+        a{
+            font-size: 8px;
+        }
+    }
+    @media ${device.mobileS} and (max-width:374px){
+        button{
+            padding: 2px;
+            font-size: 14px;
+        }
+        button:hover{
+            padding: 6px;
+            font-size: 14px;
+        }
+        span{
+            font-size: 8px;
+        }
+        a{
+            font-size: 8px;
+        }
+    }
 
 `
 const Tabs = styled.section`
@@ -108,6 +176,22 @@ const Tabs = styled.section`
         background: #222f3e;
         border: 1px solid #222f3e;
         box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+    }
+    @media ${device.mobileM} and (max-width:425px){
+        button{
+            padding: 8px;
+        }
+        button:hover{
+            padding: 12px;
+        }
+    }
+    @media ${device.mobileS} and (max-width:374px){
+        button{
+            padding: 6px;
+        }
+        button:hover{
+            padding: 10px;
+        }
     }
 `
 

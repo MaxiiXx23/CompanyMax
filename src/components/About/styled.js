@@ -1,5 +1,7 @@
 import styled from "styled-components"
 
+import { device } from '../../Config/responsiveConfig'
+
 const Container = styled.div`
     flex: 1;
     display: flex;
@@ -9,7 +11,7 @@ const Container = styled.div`
 `
 
 const Description = styled.section`
-    margin: 20px;
+    margin: 5px;
     width: 80%;
     text-align: justify;
     animation: balance 1s normal;
@@ -30,6 +32,12 @@ const Description = styled.section`
             transform: translateX(0px);
         }
 }
+    @media ${device.mobileM} and (max-width:425px){
+        font-size: 14px;
+    }
+    @media ${device.mobileS} and (max-width:374px){
+        font-size: 14px;
+    }
 `
 
 export { Container, Description }

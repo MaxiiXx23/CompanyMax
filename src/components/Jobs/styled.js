@@ -1,9 +1,10 @@
 import styled from "styled-components"
 
+import { device } from '../../Config/responsiveConfig'
+
 const Container = styled.div`
     flex: 1;
     display: flex;
-    margin: 2px 0 2px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -17,7 +18,7 @@ const Content = styled.div`
     width: 100%;
     padding: 10px;
     border-radius: 2px;
-    margin: 2px 0 2px 0;
+
     &:hover{
         transition: 0.7s;
         background: #8395a7;
@@ -63,11 +64,27 @@ const Vacancy = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    margin: 2px;
+    @media ${device.mobileM} and (max-width:425px){
+        font-size: 12px;
+    }
+    @media ${device.mobileS} and (max-width:374px){
+        font-size: 10px;
+    }
 `
 const Description = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    margin: 2px;
+    @media ${device.mobileM} and (max-width:425px){
+        font-size: 12px;
+    }
+    @media ${device.mobileS} and (max-width:374px){
+        font-size: 10px;
+    }
 `
 const ButtonSend = styled.button`
     display: flex;
@@ -78,8 +95,20 @@ const ButtonSend = styled.button`
     justify-content: space-between;
     border: 1px solid #1dd1a1;
     border-radius: 2px;
+    margin: 2px;
     background: #1dd1a1;
     cursor: pointer;
+    @media ${device.mobileM} and (max-width:425px){
+        span{
+            display: none;
+        }
+    }
+    @media ${device.mobileS} and (max-width:374px){
+        width: 15%;
+        span{
+            display: none;
+        }
+    }
 `
 
 export { Container, Content, Vacancy, Description, ButtonSend, List }
