@@ -85,8 +85,8 @@ const Tabs = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-    height: 80px;
+    padding: 5px;
+    height: 70px;
     button{
         display: flex;
         align-items: center;
